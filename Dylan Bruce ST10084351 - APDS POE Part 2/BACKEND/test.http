@@ -1,0 +1,33 @@
+GET http://localhost:3000 HTTP/1.1
+###
+GET https://localhost:3000 HTTP/1.1
+###
+GET https://localhost:3000/api HTTP/1.1
+###
+POST https://localhost:3000/api/posts HTTP/1.1
+content-type: application/json
+
+{
+    "id": "3",
+    "name": "Issue 3"
+}
+###
+GET https://localhost:3000/api/posts HTTP/1.1
+###
+DELETE https://localhost:3000/api/posts/63456c2dc3c5195db8241336 HTTP/1.1
+###
+POST https://localhost:3000/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "youwillneverguess"
+}
+###
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "test",
+    "password": "youwillneverguess"
+}
